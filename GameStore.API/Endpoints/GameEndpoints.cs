@@ -1,10 +1,11 @@
-﻿namespace GameStore.API.Endpoints;
-using GameStore.API.Dtos;
-public static class GameEndpoints
-{
-const string GetGameEndpoint = "GetGame"
+﻿using GameStore.API.Dtos;
+namespace GameStore.API.Endpoints;
 
-private readonly List<GameDto> games = [
+public static class GamesEndpoints
+{
+const string GetGameEndpoint = "GetGame";
+
+private static readonly List<GameDto> games = [
    new (
     1, 
     "Street Fighter II",
@@ -28,14 +29,14 @@ private readonly List<GameDto> games = [
 public static RouteGroupBuilder MapGamesEndpoints (this WebApplication app)
 {
 var group = app.MapGroup("games")
+.WithParameterValidation();
 // GET /games
 group.MapGet("/",()=>games);
 // GET /games/1
 group.MapGet("/{id}",(int id)=>{
     GameDto? game =games.Find(game => game.Id ==id);
     return game is null ? Results.NotFound() : Results.Ok(game);
-     })
-.WithName(GetGameEndpoint);
+     }).WithName(GetGameEndpoint);
 
 // POST /games
 group.MapPost("/",(CreateGameDTO newGame)=>{
@@ -49,6 +50,8 @@ group.MapPost("/",(CreateGameDTO newGame)=>{
     games.Add(game);
     return Results.CreatedAtRoute(GetGameEndpoint, new {id=game.Id});
 });
+
+//dotnet add package MinimalApis.Extensions --version 0.11.0
 //PUT /games
 group.MapPut("/", (int id, UpdateGameDto updateGame)=>{
     var index = games.FindIndex(game=>game.Id==id);

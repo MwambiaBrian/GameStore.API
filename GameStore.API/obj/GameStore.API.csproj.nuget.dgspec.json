@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\brian\\Desktop\\projects\\GameStore\\GameStore.API\\GameStore.API.csproj": {}
+    "C:\\Users\\brian\\Desktop\\projects\\GameStore\\GameStore.API\\GameStore.API.csproj": {}
   },
   "projects": {
-    "c:\\Users\\brian\\Desktop\\projects\\GameStore\\GameStore.API\\GameStore.API.csproj": {
+    "C:\\Users\\brian\\Desktop\\projects\\GameStore\\GameStore.API\\GameStore.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\brian\\Desktop\\projects\\GameStore\\GameStore.API\\GameStore.API.csproj",
+        "projectUniqueName": "C:\\Users\\brian\\Desktop\\projects\\GameStore\\GameStore.API\\GameStore.API.csproj",
         "projectName": "GameStore.API",
-        "projectPath": "c:\\Users\\brian\\Desktop\\projects\\GameStore\\GameStore.API\\GameStore.API.csproj",
+        "projectPath": "C:\\Users\\brian\\Desktop\\projects\\GameStore\\GameStore.API\\GameStore.API.csproj",
         "packagesPath": "C:\\Users\\brian\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\brian\\Desktop\\projects\\GameStore\\GameStore.API\\obj\\",
+        "outputPath": "C:\\Users\\brian\\Desktop\\projects\\GameStore\\GameStore.API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\brian\\AppData\\Roaming\\NuGet\\NuGet.Config",
